@@ -11,6 +11,8 @@ RUN curl https://getcaddy.com | bash -s personal http.git,http.hugo \
 
 EXPOSE 80 443 2015
 
+VOLUME /sites
+
 COPY Caddyfile /etc/Caddyfile
 
 ENTRYPOINT ["caddy"]
